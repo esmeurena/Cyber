@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/activity_login.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/activity_resource.xml" value="0.2" />
         <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/activity_result.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/activity_survey.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/after_login.xml" value="0.20572916666666666" />
       </map>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
