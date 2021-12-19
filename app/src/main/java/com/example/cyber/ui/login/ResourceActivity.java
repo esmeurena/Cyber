@@ -21,7 +21,7 @@ public class ResourceActivity extends AppCompatActivity {
         returnBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ResourceActivity.this, LoginActivity.class));// HomeActivity.class));
+                startActivity(new Intent(ResourceActivity.this, homeActivity.class));// HomeActivity.class));
             }
         });
     }

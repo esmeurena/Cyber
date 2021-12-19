@@ -21,6 +21,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.login.surveyActivity" />
+        <activity android:name=".ui.login.homeActivity" />
+        <activity android:name=".ui.login.ResourceActivity" />
+        <activity android:name=".ui.login.ResultActivity" />
+        <activity android:name=".ui.login.ContactActivity" />
+        <activity android:name=".ui.login.ShareActivity" />
+
+
     </application>
 
 </manifest>

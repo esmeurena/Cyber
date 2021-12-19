@@ -21,7 +21,7 @@ public class ResultActivity extends AppCompatActivity {
         returnHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ResultActivity.this, LoginActivity.class));// HomeActivity.class));
+                startActivity(new Intent(ResultActivity.this, homeActivity.class));// HomeActivity.class));
             }
         });
     }

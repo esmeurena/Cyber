@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/hexagonbg1"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".ui.login.ShareActivity">
+
+    <TextView
+        android:id="@+id/share_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="Share with friends!"
+        android:textColor="#36454F"
+        android:textSize="38sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="30dp"
+        android:enabled="true"
+        app:backgroundTint="#36454F"
+        android:background="@drawable/back"
+        app:layout_constraintTop_toBottomOf="@id/social_medias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/social_medias"
+        android:layout_width="368dp"
+        android:layout_height="390dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/share_header">
+
+        <com.shaishavgandhi.loginbuttons.FacebookButton
+            android:layout_marginTop = "20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:iconSize = "30sp"
+            android:text="@string/facebook" />
+
+        <com.shaishavgandhi.loginbuttons.GoogleButton
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:iconSize = "30sp"
+            android:text="@string/google"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <com.shaishavgandhi.loginbuttons.TwitterButton
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:iconSize = "30sp"
+            android:text="@string/twitter" />
+
+        <com.shaishavgandhi.loginbuttons.LinkedInButton
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:iconSize = "30sp"
+            android:text="@string/linked" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp">
+
+            <com.shaishavgandhi.loginbuttons.FacebookButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:iconSize = "30sp" />
+
+            <com.shaishavgandhi.loginbuttons.TwitterButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:iconSize = "30sp"
+                android:layout_marginStart="22dp" />
+
+            <com.shaishavgandhi.loginbuttons.GoogleButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:iconSize = "30sp"
+                android:layout_marginStart="22dp" />
+
+            <com.shaishavgandhi.loginbuttons.LinkedInButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:iconSize = "30sp"
+                android:layout_marginStart="22dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

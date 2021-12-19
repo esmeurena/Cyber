@@ -6,6 +6,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -30,6 +31,9 @@ import com.example.cyber.ui.login.LoginViewModelFactory;
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String TEXT = "text";
+    public static final String SWITCH1 = "switch1";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
-        final Button surveyButton = findViewById(R.id.survey);
+        //final Button surveyButton = findViewById(R.id.survey);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
 
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
@@ -114,18 +118,25 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
+                */
+                saveData();
+                startActivity(new Intent(LoginActivity.this, homeActivity.class));
             }
         });
 
-        surveyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, surveyActivity.class));
-            }
-        });
+    }
+
+    public void saveData(){
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        final EditText usernameEditText = findViewById(R.id.username);
+        final EditText passwordEditText = findViewById(R.id.password);
+        editor.putString(TEXT, usernameEditText.getText().toString());
+        editor.putString(TEXT, passwordEditText.getText().toString());
     }
 
     private void updateUiWithUser(LoggedInUserView model) {

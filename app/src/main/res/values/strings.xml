@@ -19,4 +19,16 @@
     <string name="text3">Never reveal your passwords to anyone. Make them long, strong, unique and use multi-factor authentication (MFA) wherever possible. Use a password manager such as LastPass or RoboForm. Use different passwords for different accounts. Use different passwords for work and home. Don\'t let apps and websites remember your passwords.</string>
     <string name="head4">4. Protect your stuff!</string>
     <string name="text4">Keep a close eye on your belongings when you\'re in public places. Lock things up or take them with you before you leave, even if you’ll only be away for a second. When you\'re at work, secure your area and lock your computer screen before leaving your desk. Take your phone and other portable items with you.</string>
+    <string name="linked">Sign In With Linkedin</string>
+    <string name="twitter">Sign In With Twitter</string>
+    <string name="google">Sign In With Google</string>
+    <string name="facebook">Sign In With Facebook</string>
+    <string name="res_header">Cyber Resources</string>
+    <string-array name="answers_question1">
+        <item>none</item>
+        <item>one</item>
+        <item>two</item>
+        <item>three</item>
+        <item>four+</item>
+    </string-array>
 </resources>
