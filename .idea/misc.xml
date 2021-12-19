@@ -3,7 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/activity_contact.xml" value="0.22" />
+        <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/activity_contact.xml" value="0.16943521594684385" />
         <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/activity_login.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/activity_resource.xml" value="0.2" />
@@ -11,6 +11,7 @@
         <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/activity_share.xml" value="0.33" />
         <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/activity_survey.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/after_login.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/esmeu/AndroidStudioProjects/Cyber/app/src/main/res/layout/test.xml" value="0.328125" />
       </map>
     </option>
   </component>
