@@ -12,73 +12,160 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".ui.login.ResultActivity">
 
+    <LinearLayout
+        android:id="@+id/linear_trophy"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/conf_icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/conf_icon"
+            android:layout_marginTop="40dp" />
+
+        <ImageView
+            android:id="@+id/trophy_icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/trophy"
+            android:layout_marginTop="40dp" />
+
+        <ImageView
+            android:id="@+id/conf_icon2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="60dp"
+            android:scaleX="-1"
+            android:background="@drawable/conf_icon"
+            android:layout_marginTop="40dp" />
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/score_header"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="24dp"
-        android:text="Your Score:"
-        android:textSize="40dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="23dp"
+        android:text="Congrats!"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/linear_trophy" />
 
     <TextView
         android:id="@+id/score"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="26dp"
-        android:layout_marginEnd="24dp"
-        android:textSize="20dp"
-        android:text="Score Placeholder"
+        android:layout_marginEnd="4dp"
+        android:textSize="34dp"
+        android:text="90% score"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#50C878"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/score_header" />
 
     <TextView
         android:id="@+id/breakdown_header"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="24dp"
         android:text="Score breakdown:"
-        android:textSize="40dp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/score" />
 
     <TextView
         android:id="@+id/breakdown"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="24dp"
         android:textSize="20dp"
-        android:text="Score breakdown Placeholder"
+        android:text="-5% - password changing frequency"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/breakdown_header" />
 
-    <Button
-        android:id="@+id/back_home"
+    <TextView
+        android:id="@+id/breakdown2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
-        android:enabled="true"
-        android:text="Back to Home screen"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="24dp"
+        android:textSize="20dp"
+        android:text="-5% - social media account total"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/breakdown"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toBottomOf="@id/breakdown" />
+
+    <Button
+        android:id="@+id/back_home"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="4dp"
+        android:enabled="true"
+        app:backgroundTint="#36454F"
+        android:background="@drawable/back"
+        app:layout_constraintTop_toBottomOf="@id/breakdown2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_home">
+
+        <com.shaishavgandhi.loginbuttons.FacebookButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="8dp"
+            app:iconSize = "30sp" />
+
+        <com.shaishavgandhi.loginbuttons.TwitterButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:iconSize = "30sp"
+            android:layout_marginStart="22dp" />
+
+        <com.shaishavgandhi.loginbuttons.GoogleButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:iconSize = "30sp"
+            android:layout_marginStart="22dp" />
+
+        <com.shaishavgandhi.loginbuttons.LinkedInButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:iconSize = "30sp"
+            android:layout_marginStart="22dp" />
+
+    </LinearLayout>
 
 
 
