@@ -31,7 +31,7 @@ public class homeActivity extends AppCompatActivity {
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(homeActivity.this, ShareActivity.class));
             }
         });
 
@@ -56,7 +56,7 @@ public class homeActivity extends AppCompatActivity {
         contactButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(homeActivity.this, ContactActivity.class));
             }
         });
     }
