@@ -1,5 +1,6 @@
 package com.example.cyber.ui.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,7 +38,7 @@ public class homeActivity extends AppCompatActivity {
         surveyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(homeActivity.this, surveyActivity.class));
             }
         });
         resourcesButton.setOnClickListener(new View.OnClickListener() {
