@@ -44,13 +44,13 @@ public class homeActivity extends AppCompatActivity {
         resourcesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(homeActivity.this, ResourceActivity.class));
             }
         });
         resultButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(homeActivity.this, ResultActivity.class));
             }
         });
         contactButton.setOnClickListener(new View.OnClickListener() {

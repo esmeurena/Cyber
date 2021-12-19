@@ -22,6 +22,9 @@
         </activity>
         <activity android:name=".ui.login.surveyActivity" />
         <activity android:name=".ui.login.homeActivity" />
+        <activity android:name=".ui.login.ResourceActivity" />
+        <activity android:name=".ui.login.ResultActivity" />
+
 
     </application>
 
