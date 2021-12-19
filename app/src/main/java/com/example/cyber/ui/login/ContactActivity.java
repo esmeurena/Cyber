@@ -33,5 +33,14 @@ public class ContactActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+
+        final Button returnHomeButton = findViewById(R.id.back_button_contact);
+
+        returnHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ContactActivity.this, homeActivity.class));// HomeActivity.class));
+            }
+        });
     }
 }

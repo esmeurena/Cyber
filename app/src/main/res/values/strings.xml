@@ -24,4 +24,11 @@
     <string name="google">Sign In With Google</string>
     <string name="facebook">Sign In With Facebook</string>
     <string name="res_header">Cyber Resources</string>
+    <string-array name="answers_question1">
+        <item>none</item>
+        <item>one</item>
+        <item>two</item>
+        <item>three</item>
+        <item>four+</item>
+    </string-array>
 </resources>

@@ -35,5 +35,14 @@ public class ShareActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share);
+
+        final Button returnHomeButton = findViewById(R.id.back_button);
+
+        returnHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ShareActivity.this, homeActivity.class));// HomeActivity.class));
+            }
+        });
     }
 }
