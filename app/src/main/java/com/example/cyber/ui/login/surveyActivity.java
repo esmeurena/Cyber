@@ -1,42 +1,22 @@
 package com.example.cyber.ui.login;
 
-import android.app.Activity;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.RadioButton;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.cyber.R;
-import com.example.cyber.ui.login.LoginViewModel;
-import com.example.cyber.ui.login.LoginViewModelFactory;
-
+import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
-public class surveyActivity extends AppCompatActivity {
+import com.example.cyber.R;
 
+
+public class surveyActivity extends AppCompatActivity
+{
     private LoginViewModel loginViewModel;
     public int score_total = 0;
     public static final String SHARED_PREFS = "sharedPrefs";
@@ -63,7 +43,7 @@ public class surveyActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
                 String selectedItem = parent.getItemAtPosition(position).toString(); //this is your selected item
-                Log.d("tag", "DOES IT FINALLY FKN WORK??? "+ selectedItem);
+                Log.d("tag", "selected score"+ selectedItem);
 
                 if(selectedItem.contains("zero"))
                 {score_total += 20;}
@@ -80,9 +60,7 @@ public class surveyActivity extends AppCompatActivity {
 
             }
             public void onNothingSelected(AdapterView<?> parent)
-            {
-
-            }
+            { }
         });
 
         Spinner spinner2 = (Spinner) findViewById(R.id.q2_spinner);
@@ -95,7 +73,7 @@ public class surveyActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
                 String selectedItem = parent.getItemAtPosition(position).toString(); //this is your selected item
-                Log.d("tag", "DOES IT FINALLY FKN WORK??? "+ selectedItem);
+                Log.d("tag", "selected score"+ selectedItem);
 
                 if(selectedItem.contains("zero"))
                 {score_total += 20;}
@@ -108,13 +86,11 @@ public class surveyActivity extends AppCompatActivity {
                 else if(selectedItem.contains("four"))
                 {score_total += 0;}
 
-                Log.d("SCORE_TOTAL", "FINALLY THE FINAL SCORE: " + score_total);
+                Log.d("SCORE_TOTAL", "selected score" + score_total);
 
             }
             public void onNothingSelected(AdapterView<?> parent)
-            {
-
-            }
+            { }
         });
 
         Spinner spinner3 = (Spinner) findViewById(R.id.q3_spinner);
@@ -127,7 +103,7 @@ public class surveyActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
                 String selectedItem = parent.getItemAtPosition(position).toString(); //this is your selected item
-                Log.d("tag", "DOES IT FINALLY FKN WORK??? "+ selectedItem);
+                Log.d("tag", "selected score"+ selectedItem);
 
                 if(selectedItem.contains("zero"))
                 {score_total += 20;}
@@ -144,9 +120,7 @@ public class surveyActivity extends AppCompatActivity {
 
             }
             public void onNothingSelected(AdapterView<?> parent)
-            {
-
-            }
+            { }
         });
 
         Spinner spinner4 = (Spinner) findViewById(R.id.q4_spinner);
@@ -154,11 +128,12 @@ public class surveyActivity extends AppCompatActivity {
                 R.array.answers_question1, android.R.layout.simple_spinner_item);
         adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner4.setAdapter(adapter4);
-        spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
                 String selectedItem = parent.getItemAtPosition(position).toString(); //this is your selected item
-                Log.d("tag", "DOES IT FINALLY FKN WORK??? "+ selectedItem);
+                Log.d("tag", "selected score "+ selectedItem);
 
                 if(selectedItem.contains("zero"))
                 {score_total += 20;}
@@ -175,9 +150,7 @@ public class surveyActivity extends AppCompatActivity {
 
             }
             public void onNothingSelected(AdapterView<?> parent)
-            {
-
-            }
+            { }
         });
 
         Spinner spinner5 = (Spinner) findViewById(R.id.q5_spinner);
@@ -185,11 +158,12 @@ public class surveyActivity extends AppCompatActivity {
                 R.array.answers_question1, android.R.layout.simple_spinner_item);
         adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner5.setAdapter(adapter5);
-        spinner5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
                 String selectedItem = parent.getItemAtPosition(position).toString(); //this is your selected item
-                Log.d("tag", "DOES IT FINALLY FKN WORK??? "+ selectedItem);
+                Log.d("tag", "selected score"+ selectedItem);
 
                 if(selectedItem.contains("zero"))
                 {score_total += 20;}
@@ -206,44 +180,25 @@ public class surveyActivity extends AppCompatActivity {
 
             }
             public void onNothingSelected(AdapterView<?> parent)
-            {
-
-            }
+            { }
         });
 
-        Log.d("SCORE_TOTAL", "FINALLY THE FINAL SCORE: " + score_total);
 
         resultButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-
-                /*
-                loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
-                */
                 if(score_total >= 90)
-                {startActivity(new Intent(surveyActivity.this, ResultActivity.class));}
+                {
+                    Intent intent = new Intent(surveyActivity.this, ResultActivity.class);
+                    Log.d("score_total", " idk" + score_total);
+                    intent.putExtra("score_total", score_total);
+                    startActivity(intent);
+                }
                 else
                 {Log.d("tag", "i suck at security");}
             }
-
         });
-
     }
-/*
-    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id)
-    {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-
-        editor.putString("q1_answer", parent.getItemAtPosition(pos).toString());
-
-        if(parent.getItemAtPosition(pos).toString() == "none")
-        {
-            editor.putInt("score", score_total+10);
-        }
-    }*/
 }
