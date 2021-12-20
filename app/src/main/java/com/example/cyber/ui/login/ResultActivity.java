@@ -12,9 +12,10 @@ import com.example.cyber.R;
 public class ResultActivity extends AppCompatActivity {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
+       // setContentView(R.layout.activity_result);
 
         final Button returnHomeButton = findViewById(R.id.back_home);
 
